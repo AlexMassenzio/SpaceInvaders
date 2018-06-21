@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4e12ff9a4b38b54fbf9f2d3095dd56c, type: 3}
-  m_Name: New PlayerSettings
+  m_Name: Default Player Settings
   m_EditorClassIdentifier: 
   lives: 3
   speedModifier: 1

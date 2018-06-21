@@ -12,7 +12,7 @@ public class StatManager : MonoBehaviour
     {
         saveDataPath = Application.persistentDataPath + "/save.dat";
 
-        if (File.Exists(saveDataPath))
+        if (!File.Exists(saveDataPath))
         {
             Debug.Log("Failed to locate save file. Creating a fresh save now...");
             GameStats newSave = new GameStats();

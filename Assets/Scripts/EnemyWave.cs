@@ -45,9 +45,17 @@ public class EnemyWave : MonoBehaviour
             Debug.Log("Could not spawn enemies. Make sure there is at least one enemy template defined.");
         }
 	}
-	
-	// Update is called once per frame
-	void FixedUpdate ()
+
+    void Update()
+    {
+        if(enemiesLeft == 0)
+        {
+            FindObjectOfType<MainMenu>().GetComponent<Canvas>().enabled = true;
+        }
+    }
+
+    // Update is called once per frame
+    void FixedUpdate ()
     {
         transform.position = new Vector2(transform.position.x + settings.speedModifier / 10f, transform.position.y);
 
@@ -72,7 +80,7 @@ public class EnemyWave : MonoBehaviour
     {
         while(true)
         {
-            //Get a random column, then have the closest invader fire a laser downwards.
+            //Get a random column, then have the closest invader fire a laser downwards. Ran out of time.
             yield return new WaitForSeconds(settings.fireInterval);
         }
     }

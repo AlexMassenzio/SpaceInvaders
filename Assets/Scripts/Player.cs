@@ -42,6 +42,7 @@ public class Player : MonoBehaviour {
         if(collision.tag == "Enemy")
         {
             Debug.Log("You lost!");
+            FindObjectOfType<MainMenu>().GetComponent<Canvas>().enabled = true;
         }
     }
 
