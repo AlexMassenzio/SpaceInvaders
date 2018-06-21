@@ -13,4 +13,15 @@ public class WaveSettings : ScriptableObject {
     public int rowAmount = 5;
     public float horizontalOffset = 3f;
     public float verticalOffset = 3f;
+
+    public WaveSettings(WaveSettings settingsToCopy)
+    {
+        speedModifier = settingsToCopy.speedModifier;
+        fireInterval = settingsToCopy.fireInterval;
+
+        columnAmount = settingsToCopy.columnAmount;
+        rowAmount = settingsToCopy.rowAmount;
+        horizontalOffset = settingsToCopy.horizontalOffset;
+        verticalOffset = settingsToCopy.horizontalOffset;
+    }
 }

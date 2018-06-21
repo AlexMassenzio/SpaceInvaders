@@ -28,7 +28,7 @@ public class Player : MonoBehaviour {
             }
             else
             {
-
+                lastLaserShot.GetComponent<LaserShot>().Detonate();
             }
         }
     }
@@ -36,4 +36,13 @@ public class Player : MonoBehaviour {
     void FixedUpdate () {
         rbody2d.MovePosition(new Vector2(transform.position.x + Input.GetAxisRaw("Horizontal") * settings.speedModifier, transform.position.y));
 	}
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Enemy")
+        {
+            Debug.Log("You lost!");
+        }
+    }
+
 }

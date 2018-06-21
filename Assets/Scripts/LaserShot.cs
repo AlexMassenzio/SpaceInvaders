@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class LaserShot : MonoBehaviour {
 
+    public LaserExplosion explosionObject;
 
     private Rigidbody2D rbody2d;
 
     private bool hasFired = false;
-    private string friendlyTag = ""; //Tag of shooter to prevent 
+    private string friendlyTag = ""; //Tag of shooter to prevent friendly fire
     private Vector3 forceDirection;
     private float laserForce = 10;
 
@@ -32,7 +33,11 @@ public class LaserShot : MonoBehaviour {
         // Make sure friendly fire cannot happen.
         if(collision.tag != friendlyTag)
         {
-            Destroy(collision.gameObject);
+            if (collision.tag != "Wall")
+            {
+                Destroy(collision.gameObject);
+            }
+
             Destroy(gameObject);
         }
     }
@@ -43,5 +48,13 @@ public class LaserShot : MonoBehaviour {
         forceDirection = direction;
         friendlyTag = shooterTag;
         laserForce = forceModifier;
+
+        GetComponent<Rigidbody2D>().velocity = forceDirection.normalized * laserForce;
+    }
+
+    public void Detonate()
+    {
+        Instantiate(explosionObject, transform.position, transform.rotation, null);
+        Destroy(gameObject);
     }
 }

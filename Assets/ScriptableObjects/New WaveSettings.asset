@@ -14,6 +14,6 @@ MonoBehaviour:
   speedModifier: 1
   fireInterval: 1
   columnAmount: 11
-  rowAmount: 5
+  rowAmount: 6
   horizontalOffset: 3
   verticalOffset: 3
