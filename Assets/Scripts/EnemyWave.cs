@@ -72,7 +72,7 @@ public class EnemyWave : MonoBehaviour
     {
         while(true)
         {
-            
+            //Get a random column, then have the closest invader fire a laser downwards.
             yield return new WaitForSeconds(settings.fireInterval);
         }
     }

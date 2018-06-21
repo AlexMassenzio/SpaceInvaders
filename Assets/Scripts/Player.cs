@@ -26,7 +26,7 @@ public class Player : MonoBehaviour {
                 lastLaserShot = Instantiate(laserPrefab, transform.position, transform.rotation, null);
                 lastLaserShot.GetComponent<LaserShot>().Fire(transform.up, tag, settings.bulletSpeedModifier);
             }
-            else
+            else // If there is a laser currently travelling
             {
                 lastLaserShot.GetComponent<LaserShot>().Detonate();
             }

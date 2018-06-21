@@ -153,7 +153,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 35153197}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.71, y: 0.1, z: 0}
+  m_LocalPosition: {x: -29.9, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -168,7 +168,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4376264418942938, guid: b49e29526798b5e429cb15ed38813cb7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 29.84
+      value: 35.4
       objectReference: {fileID: 0}
     - target: {fileID: 4376264418942938, guid: b49e29526798b5e429cb15ed38813cb7, type: 2}
       propertyPath: m_LocalPosition.y
@@ -197,6 +197,10 @@ Prefab:
     - target: {fileID: 4376264418942938, guid: b49e29526798b5e429cb15ed38813cb7, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362480958685722, guid: b49e29526798b5e429cb15ed38813cb7, type: 2}
+      propertyPath: m_Name
+      value: Right Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b49e29526798b5e429cb15ed38813cb7, type: 2}
@@ -342,7 +346,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1034160806
 GameObject:
@@ -361,7 +365,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1034160807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,12 +393,12 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1808}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.485
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -430,7 +434,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -450,7 +454,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4376264418942938, guid: b49e29526798b5e429cb15ed38813cb7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -26.17
+      value: -30.5
       objectReference: {fileID: 0}
     - target: {fileID: 4376264418942938, guid: b49e29526798b5e429cb15ed38813cb7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -474,11 +478,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4376264418942938, guid: b49e29526798b5e429cb15ed38813cb7, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1362480958685722, guid: b49e29526798b5e429cb15ed38813cb7, type: 2}
       propertyPath: m_Name
-      value: Wall (2)
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4376264418942938, guid: b49e29526798b5e429cb15ed38813cb7, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -496,11 +500,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4376264418942938, guid: b49e29526798b5e429cb15ed38813cb7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -34.58
+      value: -35.5
       objectReference: {fileID: 0}
     - target: {fileID: 4376264418942938, guid: b49e29526798b5e429cb15ed38813cb7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.09
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4376264418942938, guid: b49e29526798b5e429cb15ed38813cb7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -528,11 +532,51 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1362480958685722, guid: b49e29526798b5e429cb15ed38813cb7, type: 2}
       propertyPath: m_Name
-      value: Wall (1)
+      value: Left Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b49e29526798b5e429cb15ed38813cb7, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2071437374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2071437376}
+  - component: {fileID: 2071437375}
+  m_Layer: 0
+  m_Name: DebugControls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2071437375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2071437374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 157079c3a8d5eac42a73d53e5453dac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2071437376
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2071437374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 863.8828, y: 500.63477, z: 23.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2084085145
 Prefab:
   m_ObjectHideFlags: 0
