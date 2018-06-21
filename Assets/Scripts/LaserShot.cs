@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class LaserShot : MonoBehaviour {
 
-    public float laserSpeed = 10;
+
     private Rigidbody2D rbody2d;
+
+    private bool hasFired = false;
+    private string friendlyTag = ""; //Tag of shooter to prevent 
+    private Vector3 forceDirection;
+    private float laserForce = 10;
 
     // Use this for initialization
     void Start () {
@@ -19,12 +24,24 @@ public class LaserShot : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        rbody2d.AddForce(transform.up * laserSpeed);
+        rbody2d.AddForce(forceDirection * laserForce);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.tag);
+        // Make sure friendly fire cannot happen.
+        if(collision.tag != friendlyTag)
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
     }
 
+    public void Fire(Vector3 direction, string shooterTag, float forceModifier)
+    {
+        hasFired = true;
+        forceDirection = direction;
+        friendlyTag = shooterTag;
+        laserForce = forceModifier;
+    }
 }

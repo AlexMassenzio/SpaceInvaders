@@ -8,6 +8,7 @@ public class EnemyWave : MonoBehaviour
 
     public GameObject[] enemyTemplates; 
 
+    // Enemies are stored in a grid based on location
     private GameObject[,] enemies;
 
 	// Use this for initialization
@@ -27,7 +28,7 @@ public class EnemyWave : MonoBehaviour
                 }
             }
 
-            transform.position = Vector2.zero;
+            // Start movement coroutine
         }
         else
         {

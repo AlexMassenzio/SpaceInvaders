@@ -24,7 +24,7 @@ public class Player : MonoBehaviour {
             {
                 //Fire a laser bomb
                 lastLaserShot = Instantiate(laserPrefab, transform.position, transform.rotation, null);
-                lastLaserShot.GetComponent<LaserShot>().laserSpeed = settings.bulletSpeedModifier;
+                lastLaserShot.GetComponent<LaserShot>().Fire(transform.up, tag, settings.bulletSpeedModifier);
             }
             else
             {
