@@ -4,24 +4,18 @@ using UnityEngine;
 
 public class LaserShot : MonoBehaviour {
 
-    public LaserExplosion explosionObject;
+    public LaserExplosion explosionObject; // The object that gets created on detonation.
 
     private Rigidbody2D rbody2d;
 
-    private bool hasFired = false;
-    private string friendlyTag = ""; //Tag of shooter to prevent friendly fire
+    private string friendlyTag = ""; //GameObject tag of shooter to prevent friendly fire
     private Vector3 forceDirection;
-    private float laserForce = 10;
+    private float laserForce = 10; // Initial force to be used by all lasers.
 
-    // Use this for initialization
+    // Initialization
     void Start () {
         rbody2d = GetComponent<Rigidbody2D>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     private void FixedUpdate()
     {
@@ -44,7 +38,6 @@ public class LaserShot : MonoBehaviour {
 
     public void Fire(Vector3 direction, string shooterTag, float forceModifier)
     {
-        hasFired = true;
         forceDirection = direction;
         friendlyTag = shooterTag;
         laserForce = forceModifier;

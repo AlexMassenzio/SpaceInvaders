@@ -42,6 +42,7 @@ public class StatManager : MonoBehaviour
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(saveDataPath, FileMode.Open);
 
+            // Reading the GameStats class from a local file.
             GameStats stats = (GameStats)bf.Deserialize(file);
 
             file.Close();

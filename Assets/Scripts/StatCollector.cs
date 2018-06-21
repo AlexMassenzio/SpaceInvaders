@@ -14,4 +14,6 @@ public class StatCollector : MonoBehaviour {
         stats.playCount++;
         statManager.Save(stats);
 	}
+
+    // Create a function for storing a score with a name. Ran out of time
 }

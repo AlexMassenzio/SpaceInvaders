@@ -14,6 +14,7 @@ public class WaveSettings : ScriptableObject {
     public float horizontalOffset = 3f;
     public float verticalOffset = 3f;
 
+    // Constructor for copying data.
     public WaveSettings(WaveSettings settingsToCopy)
     {
         speedModifier = settingsToCopy.speedModifier;

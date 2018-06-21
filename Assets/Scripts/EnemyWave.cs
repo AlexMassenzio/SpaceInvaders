@@ -8,16 +8,15 @@ public class EnemyWave : MonoBehaviour
     public WaveSettings settings;
     public GameObject[] enemyTemplates; 
 
-    // Enemies are stored in a grid based on location
-    private GameObject[,] enemies;
-    private bool turnAround; //Flag for when to turn around
+    private GameObject[,] enemies; // Enemies are stored in a grid based on location.
+    private bool turnAround; // Flag for when to turn around.
 
 	// Use this for initialization
 	void Start ()
     {
         turnAround = false;
-
         settings = new WaveSettings(settings); // Create a copy to ensure we don't overwrite the scriptable object
+
         if (enemyTemplates != null && enemyTemplates.Length > 0)
         {
             // Spawn all enemies
@@ -50,7 +49,7 @@ public class EnemyWave : MonoBehaviour
     {
         if(enemiesLeft == 0)
         {
-            FindObjectOfType<MainMenu>().GetComponent<Canvas>().enabled = true;
+            FindObjectOfType<MainMenu>().GetComponent<Canvas>().enabled = true; // Enable the game over screen.
         }
     }
 
