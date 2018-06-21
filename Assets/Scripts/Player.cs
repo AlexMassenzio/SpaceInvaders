@@ -5,14 +5,35 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public PlayerSettings settings;
+    public GameObject laserPrefab;
+
+    private Rigidbody2D rbody2d;
+    private GameObject lastLaserShot;
 
 	// Use this for initialization
 	void Start () {
-		
+        rbody2d = GetComponent<Rigidbody2D>();
+        lastLaserShot = null;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+    void Update()
+    {
+        if(Input.GetButtonDown("Fire1"))
+        {
+            if (lastLaserShot == null)
+            {
+                //Fire a laser bomb
+                lastLaserShot = Instantiate(laserPrefab, transform.position, transform.rotation, null);
+                lastLaserShot.GetComponent<LaserShot>().laserSpeed = settings.bulletSpeedModifier;
+            }
+            else
+            {
+
+            }
+        }
+    }
+
+    void FixedUpdate () {
+        rbody2d.MovePosition(new Vector2(transform.position.x + Input.GetAxisRaw("Horizontal") * settings.speedModifier, transform.position.y));
 	}
 }

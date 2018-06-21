@@ -13,9 +13,9 @@ public class EnemyWave : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        // Spawn all enemies
         if (enemyTemplates != null && enemyTemplates.Length > 0)
         {
+            // Spawn all enemies
             enemies = new GameObject[settings.columnAmount, settings.rowAmount];
 
             for (int i = 0; i < settings.columnAmount; i++)
@@ -23,9 +23,11 @@ public class EnemyWave : MonoBehaviour
                 for (int j = 0; j < settings.rowAmount; j++)
                 {
                     int chosenTemplate = (int)Mathf.Min((j + 1f) / settings.rowAmount * enemyTemplates.Length, enemyTemplates.Length - 1); // Picks a template based on the row.
-                    enemies[i, j] = Instantiate(enemyTemplates[chosenTemplate], new Vector3(i * settings.horizontalOffset, j * settings.verticalOffset, 0f), Quaternion.identity, transform); // Spawn in each enemy type depending on row.
+                    enemies[i, j] = Instantiate(enemyTemplates[chosenTemplate], new Vector3(i * settings.horizontalOffset, -1f * j * settings.verticalOffset, 0f), Quaternion.identity, transform); // Spawn in each enemy type depending on row.
                 }
             }
+
+            transform.position = Vector2.zero;
         }
         else
         {

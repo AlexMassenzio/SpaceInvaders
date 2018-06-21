@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 3
   speedModifier: 1
-  bulletSpeedModifier: 1
+  bulletSpeedModifier: 10
